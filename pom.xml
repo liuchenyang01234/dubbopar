@@ -22,6 +22,7 @@
         <module>Consumer</module>
         <module>provider2</module>
         <module>kaf</module>
+        <module>RedisOperation</module>
     </modules>
 
 

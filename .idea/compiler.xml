@@ -11,6 +11,7 @@
         <module name="kaf" />
         <module name="provider" />
         <module name="provider2" />
+        <module name="RedisOperation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -20,6 +21,7 @@
       <module name="kaf" target="1.8" />
       <module name="provider" target="1.8" />
       <module name="provider2" target="1.8" />
+      <module name="RedisOperation" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
