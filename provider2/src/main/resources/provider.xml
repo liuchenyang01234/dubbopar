@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 添加 DUBBO SCHEMA -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 应用名 -->
+    <dubbo:application name="dubbo-provider1"/>
+    <!-- 连接到哪个本地注册中心 -->
+    <dubbo:registry protocol="zookeeper" address="101.132.187.128:2181" />
+    <dubbo:protocol name="dubbo" port="31003" />
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service  interface="Ser.NameSer" ref="NameSer2" timeout="1800000" version="1.0.0.1"/>
+    <bean id="NameSer2" class="nihao.Seriml"/></beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 添加 DUBBO SCHEMA -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+<dubbo:application name="dubbo-consumer" />
+<dubbo:consumer timeout="1800000" retries="0" />
+   <!-- <dubbo:registry address="multicast://224.5.6.7:1234" />-->
+    <dubbo:registry protocol="zookeeper" address="101.132.187.128:2181" />
+<dubbo:reference retries="2" id="NameSer"  interface="Ser.NameSer"  version="1.0.0.1"/>
+</beans>
