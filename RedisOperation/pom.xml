@@ -13,6 +13,13 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>1.5.1.RELEASE</version>
+        </dependency>
+
+
         <!--可以引入日志 @Slf4j注解-->
         <dependency>
             <groupId>org.projectlombok</groupId>
