@@ -28,7 +28,7 @@ public class JedisPoolDAO {
             Jedis jedis = pool.getResource();
             jedis.auth("root");
             return jedis;
-        }catch (Exception e)
+        }catch (Exception e)  //根据不同的异常类型 确定错误
         {
             log.error("超时");
             log.error(e.getMessage());
